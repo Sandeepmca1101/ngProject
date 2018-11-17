@@ -20,3 +20,17 @@ Angular
 ===============
 			*to install npm install -g@angular/cli (here npm is like maven )
 			*ng version 
+			*npm install for node installation
+			rules for lint are define in the tsLint.json 
+			ng build -->crcate dist folder and help to deploy directly from this folder 
+			ng test --> for test cases (Testcases written in jasmine and karma is used to run the test cases )
+			  	|-Test cases file having specification .spec   test.ts is starting point of the testcases
+			*ng e2e have protractor -->
+			
+			Framework and packages are mentioned in the package.json
+			Pollyfills.ts take care of browser compatibility
+			Style.css global style of the applciation
+			app folder contain all the ng code like module components 
+			assest contain the images 
+			
+			Interpolation

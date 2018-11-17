@@ -1,0 +1,22 @@
+Angular
+
+Why Full Stack ?
+Suppose you develop any ui ->Service(RestAPI) ->backend -> db  Full stack say if ui have to connect the IOT,or mobile app we can use 
+th backend services as it . So in case of UI we are going to change the Angular or someother for the UI and rest of the things are the same .you can extend arctiecture 
+and design of the applciation .
+
+*ESScript ->EccmaScript is a standard and java script is the implimentation of ES.latest ver ES8(Modern JS usser modular programming).
+** JS is loosely type lang means when u define variable you are not define type of the variable e.g var a,a=5 it is different from java which is tightly type when you define var you are 
+    define the variable 
+    value : number 
+** TS you can define on parameter
+      function add(number1:number,number2:num):number{
+		return number1+number2;
+	  }	
+	  
+	TS have concept of interface and class have to define the implimentation of interface 
+
+Angular 
+===============
+			*to install npm install -g@angular/cli (here npm is like maven )
+			*ng version 

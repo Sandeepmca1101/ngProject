@@ -34,3 +34,44 @@ Angular
 			assest contain the images 
 			
 			Interpolation
+			
+ Que1? how many file default generated when we add new Component ?
+ Ans1: 4 files 
+		index.component.html
+		index.component.css
+		index.component.ts
+		index.component.spec.ts
+		
+Ques2:What is the module ?
+Ans2 : A file having class and function .
+
+Que3: how to make class public 
+Ans3: by declaring export.
+
+Ques4.Decorater ?
+Ans4: is like object in the java 	@Component({
+										selector:'app-welcome',
+										templateUrl:'./welcome.component.html',
+										styleUrs:['./welcome.component.css']
+										})
+										
+Que5: method Declaration and variable?
+Ans5:   ngOninit : void {}  here void is returntype 
+	  var => varName ='' or ""  or in TS message:String="messgae" ,here String is optional 
+	  
+	(event)=WhatShouldYouDo
+
+Data binding 
+		|-interpolitation one way {{}} create a variable that ties with the view 
+		|-event binding onclick event (component event ) bind view event to the 
+		|-2way [(ngModel)] from property to view and model 
+ 		
+Routing 
+  |-<router-outlet></router-outlet>
+  |-route-> path and component  
+  |-Dependency injected by addin router:Router in the constructor  and also have to do import
+  |-in the logic called this,router.navigate method and display page &router also takes valueor or param form url
+     e.g this.router.navigate(['welcome',this.username])		  
+			
+			
+			

@@ -11,7 +11,7 @@ export class WelcomeComponent implements OnInit {
 
   message="SomeWelcomeMEsg"
   name= ''
-  constructor(private route:ActivatedRoute) {
+  constructor(public route:ActivatedRoute) {
 
   }
 

@@ -1,5 +1,5 @@
-Angular
-
+Angular 
+18-11-2018
 Why Full Stack ?
 Suppose you develop any ui ->Service(RestAPI) ->backend -> db  Full stack say if ui have to connect the IOT,or mobile app we can use 
 th backend services as it . So in case of UI we are going to change the Angular or someother for the UI and rest of the things are the same .you can extend arctiecture 
@@ -22,7 +22,7 @@ Angular
 			*ng version 
 			*npm install for node installation
 			rules for lint are define in the tsLint.json 
-			ng build -->crcate dist folder and help to deploy directly from this folder 
+			ng build -->crceate dist folder and help to deploy directly from this folder 
 			ng test --> for test cases (Testcases written in jasmine and karma is used to run the test cases )
 			  	|-Test cases file having specification .spec   test.ts is starting point of the testcases
 			*ng e2e have protractor -->
@@ -71,7 +71,11 @@ Routing
   |-route-> path and component  
   |-Dependency injected by addin router:Router in the constructor  and also have to do import
   |-in the logic called this,router.navigate method and display page &router also takes valueor or param form url
-     e.g this.router.navigate(['welcome',this.username])		  
+     e.g this.router.navigate(['welcome',this.username])	
+  |-to call any object as a reference <a routerLink="/todos">Click here</a>	 
+
+    <tr *ngFor="let todo of todos"> 	 
+	 
 			
 			
 			

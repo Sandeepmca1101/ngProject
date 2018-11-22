@@ -1,7 +1,14 @@
-<table border="1">
-  <caption>
+<h1>My Todo's</h1>
+<div class="container">
+<table class="table" >
+  <!--<caption>-->
     <thead>
-    <tr><td>Id</td><td>Description</td><td>TargetDate</td><td>Completed?</td></tr>
+    <tr>
+      <th>Id</th>
+      <th>Description</th>
+      <th>TargetDate</th>
+      <th>Completed?</th>
+    </tr>
     </thead>
     <tbody>
     <tr *ngFor="let todo of todos">
@@ -9,5 +16,6 @@
       <td>{{todo.targetDate | date |uppercase}}</td><td>{{todo.done}}</td>
     </tr>
     </tbody>
-  </caption>
+  <!--</caption>-->
 </table>
+</div>

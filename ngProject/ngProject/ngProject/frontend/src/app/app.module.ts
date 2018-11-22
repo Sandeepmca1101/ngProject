@@ -9,6 +9,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { ListTodosComponent } from './list-todos/list-todos.component';
+import { AppFooterComponent } from './app-footer/app-footer.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ListTodosComponent } from './list-todos/list-todos.component';
     WelcomeComponent,
     LoginComponent,
     ErrorComponent,
-    ListTodosComponent
+    ListTodosComponent,
+    AppFooterComponent,
+    AppHeaderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

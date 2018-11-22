@@ -40,7 +40,7 @@ Angular
 		index.component.html
 		index.component.css
 		index.component.ts
-		index.component.spec.ts
+		index.component.spec.ts    //here we are saying that html page is loaded for specific data or event mentioned in the component.ts
 		
 Ques2:What is the module ?
 Ans2 : A file having class and function .
@@ -60,7 +60,24 @@ Ans5:   ngOninit : void {}  here void is returntype
 	  var => varName ='' or ""  or in TS message:String="messgae" ,here String is optional 
 	  
 	(event)=WhatShouldYouDo
+	
+Que6 :What is struture of module ?
+Ans6 :suppose by default App ,odule is there that having Imports from 
+	  then Decorator @Ngmodule({}) having all user define component for that module 
+				|-then imports:[] //angular imports e.g BrowserModule,AppRoutingModule,FormsModule
+				|-then provider:[]
+				|-then bootstrap :[AppComponent] //When this component loaded which one loded first	
+	  Export class AppModule  {}   and if outside this module component want outside this module then access by this export class 	
 
+Que7:What happen on page load or Boostraping in the angular &RootModule &Component?
+Ans7:When you load any page index.html loaded where you will find the name of rootmodule e.g app-route which one is loaded from main.ts
+	  In the main.ts we define bootstrapModule (NameofModule) which one isloaded after getting the name of the module .Now in the App Module 
+      Pick the name of the Bootstrap Component e.g AppComponent -> then app.component.TS->in then defination of Component ->Tempalte url->html page 
+	  
+      |-The Module which one is loaded first or bootstrap first called RootModule 
+		to find open main.ts ->platformBrowserDynamic().bootstrapModule(AppModule){}	  
+Que8:How to import css minified file ?
+Ans8: @import url(link) --> in the style.css
 Data binding 
 		|-interpolitation one way {{}} create a variable that ties with the view 
 		|-event binding onclick event (component event ) bind view event to the 
@@ -74,8 +91,16 @@ Routing
      e.g this.router.navigate(['welcome',this.username])	
   |-to call any object as a reference <a routerLink="/todos">Click here</a>	 
 
-    <tr *ngFor="let todo of todos"> 	 
+    <tr *ngFor="let todo of todos"> 	
+
+  |- when you are routing and need param value in annother component this.route.snapshot.params['name'] and make sure 
+      constructor(public route:ActivatedRoute) {}
+
+    
 	 
 			
 			
-			
+*ngFor	
+*ngIf	
+[(ngModel)] -> to use this import FormsModule from @angular/Forms in the app.module.ts	
+navbar->when something represting navigation in bootstrap  have to include navbar 

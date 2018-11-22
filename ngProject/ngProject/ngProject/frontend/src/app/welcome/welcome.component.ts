@@ -22,6 +22,6 @@ export class WelcomeComponent implements OnInit {
   }
 
 }
-public class TestClass {
+ class TestClass {
 
 }

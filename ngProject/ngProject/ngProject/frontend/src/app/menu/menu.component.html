@@ -4,12 +4,15 @@
     <a href="http://www.google.com " class="navbar-brand">Google</a>
   </div>
   <ul class="navbar-nav">
-       <li><a href=""    class="nav-link">Home</a></li>
-       <li><a href="/todos" class="nav-link">Links</a></li>
+       <li><a routerLink=""    class="nav-link">Home</a></li>
+       <li><a routerLink="/todos" class="nav-link">Links</a></li>
   </ul>
-  <ul class="navbar-nav navbar-collapse justify-content-end">
-    <li><a href="/login" class="nav-link">Login</a></li>
-    <li> <a href="/login" class="nav-link">Logout</a></li>
+
+
+  <ul  class="navbar-nav navbar-collapse justify-content-end">
+    <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+    <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
   </ul>
+
 </nav>
 </html>

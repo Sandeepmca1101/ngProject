@@ -76,13 +76,21 @@ Ans7:When you load any page index.html loaded where you will find the name of ro
 	  
       |-The Module which one is loaded first or bootstrap first called RootModule 
 		to find open main.ts ->platformBrowserDynamic().bootstrapModule(AppModule){}	  
+		
 Que8:How to import css minified file ?
 Ans8: @import url(link) --> in the style.css
 Data binding 
 		|-interpolitation one way {{}} create a variable that ties with the view 
 		|-event binding onclick event (component event ) bind view event to the 
 		|-2way [(ngModel)] from property to view and model 
+		
+Ques9: <a href="" > Vs <a routerLink=""> ?
+Ans9:  when we click on the a href whole page is loaded which is not good practise so overcome this we use RouterLink 		
  		
+Que10: Files generated while creating Service ?
+Ans10: hardcoded-authentication.service.spec.ts (419 bytes)
+       hardcoded-authentication.service.ts  		//*Something common for all components then go for Service 	
+
 Routing 
   |-<router-outlet></router-outlet>
   |-route-> path and component  
@@ -97,7 +105,11 @@ Routing
       constructor(public route:ActivatedRoute) {}
 
     
-	 
+*Something common for all components then go for Service
+*@Injectable make that component available for DI.
+*You can call Service directly in the html page without storing a value in variable and then calling (V33)
+*For RouteGuard have to implements CanActivate  ->canActivate(route:ActivatedRouteSnapshot,state:RouterStateSnapshot){
+    	 
 			
 			
 *ngFor	

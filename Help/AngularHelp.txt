@@ -108,7 +108,35 @@ Routing
 *Something common for all components then go for Service
 *@Injectable make that component available for DI.
 *You can call Service directly in the html page without storing a value in variable and then calling (V33)
-*For RouteGuard have to implements CanActivate  ->canActivate(route:ActivatedRouteSnapshot,state:RouterStateSnapshot){
+*For RouteGuard have to implements CanActivate  ->canActivate(route:ActivatedRouteSnapshot,state:RouterStateSnapshot){}
+   |-so when we need that we need to implement extra on component or with service then go for RouteGuard 
+   |Changes in the code in app routing.ts =>{path:'welcome/:name',component:WelcomeComponent,canActivate:[RouteGuardService]}, 
+											{path:'todos',component:ListTodosComponent,canActivate:[RouteGuardService]},
+											defining the canactivate component and service name
+											
+Vid 51-> 
+ Observable
+ ===========
+ *Observable is used for asynchronous calls or we can say we are writing ajax code same like that ng uses observable .
+ *Observable are declative have to define everything 
+ TO CALL ANOTHER WEBSERVICE 
+ =============================
+ Step 1. Write a service and in constructor inject http:HttClient 
+ Step 2. app.module import HTTPCLIENTMODULE
+ Step 3.write method by using injected component variabe 
+		 e.g this.http.get('http://localhost:8080/helloworld');
+ Step 4. from where you are calling that service make sure you SUBSCRIBE that service
+		  e.g this.welcomeDataService.executehelloWorldBeanService().subscribe();
+ Step 5. Sometime it will throw below Exception 
+		   for that @CrossOrigin(origins="http://localhost:4200")
+		 
+ 
+ 
+ 
+ Que:Access to XMLHttpRequest at 'http://localhost:8080/hello' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present    on the requested resource.
+ 
+    
+  
     	 
 			
 			
@@ -116,3 +144,34 @@ Routing
 *ngIf	
 [(ngModel)] -> to use this import FormsModule from @angular/Forms in the app.module.ts	
 navbar->when something represting navigation in bootstrap  have to include navbar 
+
+
+
+====================WEBSERVICES==================
+*machine to machine or application to application interoperable and having communication in b/w 
+*Service Defination ->Req/res format                          //platform indepenedent by req and res
+					->Req Structure							  //service def define the structure of req or res	
+					->Response Structure
+					->Endpoint
+					
+					
+					
+					
+					
+					
+					
+					
+					
+==========================================================INTERVIEW====================================
+-feature
+-component 
+-angular 
+-https -methods
+ 
+-routing 
+-java 8 
+-Collect
+-functional 
+-Sorting 
+-ideal ur for book api
+					

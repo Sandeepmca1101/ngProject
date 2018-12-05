@@ -1,0 +1,12 @@
+package ng.com.example.Ngdemo.Controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class NgServiceController {
+    @GetMapping("/hello")
+	public String getHello(){
+		return "Hello";
+	}
+}

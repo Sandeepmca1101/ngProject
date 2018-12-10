@@ -13,6 +13,9 @@ export class WelcomeComponent implements OnInit {
 
   message="SomeWelcomeMEsg"
   name= ''
+  welcomeMesgFromService:string
+  welcomeNameFromService=''
+  errorFromService=''
   constructor(public route:ActivatedRoute,private welcomeDataService:WelcomeDataService) {
 
   }
@@ -25,8 +28,33 @@ export class WelcomeComponent implements OnInit {
   onclickButton(){
     console.log("Welcome customized message ");
     //console.log(this.welcomeDataService.executehelloWorldBeanService());
-    this.welcomeDataService.executehelloWorldBeanService().subscribe();
+    this.welcomeDataService.executehelloWorldBeanService().subscribe(
+     // response => this.handleSuccessfulResponse(response)
+        //response => console.log(response.message)
+      response => this.handleSuccessfulResponse(response),
+      error=>this.handleError(error)
+    );
+    console.log('lastline from welcome component');
   }
+  onclickButtonWithParam(){
+    this.welcomeDataService.executehelloWorldBeanServiceWithParam(this.name).subscribe(
+        response => this.handleSuccessfulResponse(response),
+        error=>this.handleError(error)
+    );
+  }
+  handleSuccessfulResponse(response){
+    this.welcomeMesgFromService= response.message
+    this.welcomeNameFromService= response.name
+    console.log(response);
+    console.log(response.message+ response.name);
+  }
+  handleError(error){
+    //console.log(error);
+    console.log(error.error.message);
+    this.errorFromService= error.error.message;
+  }
+
+
 
 }
 

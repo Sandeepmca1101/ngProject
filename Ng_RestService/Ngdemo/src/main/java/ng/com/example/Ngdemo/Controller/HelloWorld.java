@@ -3,14 +3,14 @@ package ng.com.example.Ngdemo.Controller;
 public class HelloWorld {
 	
 	private String name ;
-    private String msg;
+    private String message;
     
     public HelloWorld(){}
     
-	public HelloWorld(String name, String msg) {
+	public HelloWorld(String name, String message) {
 		super();
 		this.name = name;
-		this.msg = msg;
+		this.message = message;
 	}
 	public String getName() {
 		return name;
@@ -18,11 +18,15 @@ public class HelloWorld {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getMsg() {
-		return msg;
+
+	public String getMessage() {
+		return message;
 	}
-	public void setMsg(String msg) {
-		this.msg = msg;
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
+	
+	
     
 }

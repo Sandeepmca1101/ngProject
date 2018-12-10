@@ -1,4 +1,8 @@
 <h1> Welcome....</h1>
+<div class="container error badError" *ngIf="errorFromService" >
+  <h2>ERROR</h2>
+  {{errorFromService}}
+</div>
 <div class="container">
   welcome  {{name}}!<br>
   You can manage your todos page <a routerLink="/todos">Click here</a>
@@ -6,4 +10,14 @@
 <div class="container">
   Click here to get Customized Welcome messge
   <button (click)="onclickButton()" class="btn btn-success">Click here </button>
+</div>
+<div class="container" *ngIf="welcomeMesgFromService">
+  <h2>Your Customized Welcome message</h2>
+ {{welcomeMesgFromService +","+welcomeNameFromService}}
+
+</div>
+
+<div class="container">
+  Click here to get Customized Welcome messge Param
+  <button (click)="onclickButtonWithParam()" class="btn btn-success">Click here </button>
 </div>

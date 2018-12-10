@@ -125,8 +125,8 @@ Vid 51->
  Step 2. app.module import HTTPCLIENTMODULE
  Step 3.write method by using injected component variabe 
 		 e.g this.http.get('http://localhost:8080/helloworld');
- Step 4. from where you are calling that service make sure you SUBSCRIBE that service
-		  e.g this.welcomeDataService.executehelloWorldBeanService().subscribe();
+ Step 4. from where you are calling that service make sure you SUBSCRIBE that service       //Subscribe send asynchronous call means this one will not return the result
+		  e.g this.welcomeDataService.executehelloWorldBeanService().subscribe();           //but it will be when synchronous call happen in JS
  Step 5. Sometime it will throw below Exception 
 		   for that @CrossOrigin(origins="http://localhost:4200")
 		 
@@ -134,11 +134,26 @@ Vid 51->
  
  
  Que:Access to XMLHttpRequest at 'http://localhost:8080/hello' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present    on the requested resource.
- 
+ Ans: means Eclipse server is not allowed to call 4200 server due to security so we have to define orgins with port no in the Controller class that means
+	  allow these port to call 8080 api externally .	
+	  @CrossOrigin(origins="http://localhost:4200")
     
-  
-    	 
-			
+ Ques:-SUBSCRIBE?
+ Ans:-Subscribe send asynchronous call means this one will not return the result but it will be when synchronous call happen in JS
+    	 e.g this.welcomeDataService.executehelloWorldBeanService().subscribe(); //not return result	
+		 
+		 this.welcomeDataService.executehelloWorldBeanService().subscribe(
+          response => this.handleSuccessfulResponse(response)  
+       );  
+	   means needs to call the handleSuccessfulResponse,the response which comes back.You're saying when the subscribe whatever is done, by the observable is successful,
+       get the response and call this specific method.
+		 
+ Que:Arrow Method?		
+ Que:Error handling With SUBSCRIBE?
+ Ans: To handle error or exception in ng one approach is with the subscribe first parameter as above we have successful return and second one is for error 
+
+ Que: How to get param value from url ?
+ Ans: BAck tick 
 			
 *ngFor	
 *ngIf	

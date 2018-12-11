@@ -154,6 +154,21 @@ Vid 51->
 
  Que: How to get param value from url ?
  Ans: BAck tick 
+ 
+ Ques: to get the value from URL Param ?
+ Ans:   private route:ActivatedRoute) { }
+		ngOnInit() {
+			this.id=this.route.snapshot.params['id'];
+			
+Ques: ng =bind
+Ans :  [(ngModel)]
+		First one is property binding means [ngModel]="todo.Date" means date is binded for view and model 
+      Second one is event binding when the specific model change update the value (ngModelChange)="todo.targetDate=$event"		
+Que: Why Form tag ?
+Ans : when we need functionality like press Enter at any place on the page value should be submitted automatically 
+
+Que: Template Variable in Angular ?
+Ans: are used to do some validations  #todoForm="ngForm" also e.g required="required"	  
 			
 *ngFor	
 *ngIf	

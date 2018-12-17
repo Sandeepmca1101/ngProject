@@ -57,12 +57,12 @@ Ans4: is like object in the java 	@Component({
 										
 Que5: method Declaration and variable?
 Ans5:   ngOninit : void {}  here void is returntype 
-	  var => varName ='' or ""  or in TS message:String="messgae" ,here String is optional 
+	  var => varName ='' or ""  or in TS message:String="message" ,here String is optional 
 	  
 	(event)=WhatShouldYouDo
 	
 Que6 :What is struture of module ?
-Ans6 :suppose by default App ,odule is there that having Imports from 
+Ans6 :suppose by default App ,module is there that having Imports from 
 	  then Decorator @Ngmodule({}) having all user define component for that module 
 				|-then imports:[] //angular imports e.g BrowserModule,AppRoutingModule,FormsModule
 				|-then provider:[]
@@ -131,8 +131,6 @@ Vid 51->
 		   for that @CrossOrigin(origins="http://localhost:4200")
 		 
  
- 
- 
  Que:Access to XMLHttpRequest at 'http://localhost:8080/hello' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present    on the requested resource.
  Ans: means Eclipse server is not allowed to call 4200 server due to security so we have to define orgins with port no in the Controller class that means
 	  allow these port to call 8080 api externally .	
@@ -155,7 +153,7 @@ Vid 51->
  Que: How to get param value from url ?
  Ans: BAck tick 
  
- Ques: to get the value from URL Param ?
+ Que: to get the value from URL Param ?
  Ans:   private route:ActivatedRoute) { }
 		ngOnInit() {
 			this.id=this.route.snapshot.params['id'];
@@ -163,7 +161,8 @@ Vid 51->
 Ques: ng =bind
 Ans :  [(ngModel)]
 		First one is property binding means [ngModel]="todo.Date" means date is binded for view and model 
-      Second one is event binding when the specific model change update the value (ngModelChange)="todo.targetDate=$event"		
+      Second one is event binding when the specific model change update the value (ngModelChange)="todo.targetDate=$event"	
+	  
 Que: Why Form tag ?
 Ans : when we need functionality like press Enter at any place on the page value should be submitted automatically 
 
@@ -174,10 +173,33 @@ Ans: are used to do some validations  #todoForm="ngForm" also e.g required="requ
 *ngIf	
 [(ngModel)] -> to use this import FormsModule from @angular/Forms in the app.module.ts	
 navbar->when something represting navigation in bootstrap  have to include navbar 
+Intercecptor => that we want to attach with evevry request 
+PIPE=> what should done if req is success or fails 
+==================================================Security=================================================================
+ Spring boot strater security helps to secure web applcation and resful services .
+ BAsic Authe -->Spring sec( form bassed Authentication default enabled by spring sec.)
+	|-session cookie is set and session is set on server side so cookie will sent ith every request to the browser so if same browser all req are successfully
+	 it is based on the session which is create on t	he server and cookie which is in your browser ,so this cookie identify 
+	 the session in your browser and that would be used by authentication mechanism .
+	  DisAdvantage --> need to create a session on the server side ***
+	 
+-Basic-> we have to send header with the user name password with every request .
 
+Ques:-Error Access to XMLHttpRequest at 'http://localhost:8080/users/sandeep/todos' from origin 'http://localhost:4200' has been blocked by CORS policy:
+ No 'Access-Control-Allow-Origin' header is present on the requested resource.	 
+Sol:- Header is missing  means Authorization BAsic User name password
 
+ Access to XMLHttpRequest at 'http://localhost:8080/helloworld/ok' from origin 'http://localhost:4200' has been blocked by CORS policy: 
+  Response to preflight request doesn't pass access control check: It does not have HTTP ok status. ===========OPTIONS =RequestType
+  
+Intercecptor => that we want to attach with evevry request   
 
+Extends WebSecurityConfigurerAdapter and mark @Configuration @EnableWebSecurity
+  
+===============================================
 ====================WEBSERVICES==================
+
+
 *machine to machine or application to application interoperable and having communication in b/w 
 *Service Defination ->Req/res format                          //platform indepenedent by req and res
 					->Req Structure							  //service def define the structure of req or res	
@@ -197,6 +219,8 @@ navbar->when something represting navigation in bootstrap  have to include navba
 -component 
 -angular 
 -https -methods
+-Ngoninit
+-promise vs watcher
  
 -routing 
 -java 8 
@@ -204,4 +228,6 @@ navbar->when something represting navigation in bootstrap  have to include navba
 -functional 
 -Sorting 
 -ideal ur for book api
+
+
 					

@@ -1,9 +1,13 @@
 package ng.com.example.Ngdemo.Controller;
 
+import java.util.HashMap;
+
 public class HelloWorld {
 	
 	private String name ;
     private String message;
+    
+    private HashMap<String ,String> h=new HashMap<String,String>();
     
     public HelloWorld(){}
     

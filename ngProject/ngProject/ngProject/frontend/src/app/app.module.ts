@@ -1,6 +1,7 @@
+import { HttpInterceptorBasicAuthServiceService } from './service/http/http-interceptor-basic-auth-service.service';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +36,11 @@ import { TodoComponent } from './todo/todo.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+        {provide :HTTP_INTERCEPTORS,
+                      useClass:HttpInterceptorBasicAuthServiceService,
+                      multi:true}
+       ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

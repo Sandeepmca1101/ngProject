@@ -1,7 +1,0 @@
-package ng.com.example.Ngdemo.Controller;
-
-public class HelloWorld {
-	private String name ;
-    private String msg;
-    
-}

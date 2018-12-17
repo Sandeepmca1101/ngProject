@@ -1,0 +1,5 @@
+package ng.com.example.Ngdemo.basic.auth;
+
+public class SpringSecurityBasicAuth {
+
+}

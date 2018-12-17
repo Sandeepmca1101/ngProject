@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;Ngdemo/src/main/java/ng.com.example.Ngdemo.basic.auth&apos;&#x0D;&#x0A;- Original project: &apos;Ngdemo&apos;&#x0D;&#x0A;- Destination element: &apos;Ngdemo/src/main/java/ng.com.example.Ngdemo.basic.auth&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ng.com.example.Ngdemo.Controller.HelloWorld.java&#x0D;&#x0A;     ng.com.example.Ngdemo.Controller.NgServiceController.java" description="Copy compilation units" destination="/src\/main\/java&lt;ng.com.example.Ngdemo.basic.auth" element1="/src\/main\/java&lt;ng.com.example.Ngdemo.Controller{HelloWorld.java" element2="/src\/main\/java&lt;ng.com.example.Ngdemo.Controller{NgServiceController.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1544600982170" units="2" version="1.0"/>
+</session>

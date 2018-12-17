@@ -37,20 +37,23 @@ export class WelcomeComponent implements OnInit {
     console.log('lastline from welcome component');
   }
   onclickButtonWithParam(){
+    console.log("name from welcome "+this.name);
     this.welcomeDataService.executehelloWorldBeanServiceWithParam(this.name).subscribe(
         response => this.handleSuccessfulResponse(response),
         error=>this.handleError(error)
     );
   }
   handleSuccessfulResponse(response){
+    console.log("handleSuccessfulResponse ========")
     this.welcomeMesgFromService= response.message
     this.welcomeNameFromService= response.name
     console.log(response);
     console.log(response.message+ response.name);
   }
   handleError(error){
+    console.log("handleError ========")
     //console.log(error);
-    console.log(error.error.message);
+    //console.log(error.error.message);
     this.errorFromService= error.error.message;
   }
 

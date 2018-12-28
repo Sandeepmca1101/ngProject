@@ -194,7 +194,27 @@ Sol:- Header is missing  means Authorization BAsic User name password
   
 Intercecptor => that we want to attach with evevry request   
 
-Extends WebSecurityConfigurerAdapter and mark @Configuration @EnableWebSecurity
+**Diadvantage of Basic Authentication is once user allowed there is no expiry of their credententials and not user tracking 
+  to overcome this we have Custome Tokens  JWT (Json Web Tokens )
+  JWT
+  ====
+  comnon tokens Standard and can contain user details and Authorization .
+  *having standard part and other customized section which user can override as per their requirement .
+  
+  JWT Structure
+  =============
+  Header ,Payload , Signature
+  Header => |-alg-what algorithm used for hashing 
+			|-type:JWT
+ 
+  Payload => predefined elements and are t not manadatory 
+			|- sub 
+			|-name 
+			|-admin
+			
+  Signature => Base64 header header payload  and 532 bit secret (that make sure while decoding only that decoder knows this code )
+  
+  
   
 ===============================================
 ====================WEBSERVICES==================

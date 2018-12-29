@@ -1,12 +1,13 @@
 Angular 
 18-11-2018
 Why Full Stack ?
-Suppose you develop any ui ->Service(RestAPI) ->backend -> db  Full stack say if ui have to connect the IOT,or mobile app we can use 
-th backend services as it . So in case of UI we are going to change the Angular or someother for the UI and rest of the things are the same .you can extend arctiecture 
-and design of the applciation .
+Suppose you develop any ui ->Service(RestAPI) ->backend -> db  Full stack say if ui have to connect the IOT,or mobile app
+we can use the backend services as it . So in case of UI we are going to change the Angular or someother for the UI 
+and rest of the things are the same .you can extend arctiecture and design of the applciation .
 
 *ESScript ->EccmaScript is a standard and java script is the implimentation of ES.latest ver ES8(Modern JS usser modular programming).
-** JS is loosely type lang means when u define variable you are not define type of the variable e.g var a,a=5 it is different from java which is tightly type when you define var you are 
+** JS is loosely type lang means when u define variable you are not define type of the variable e.g var a,a=5 it is different
+from java which is tightly type when you define var you are 
     define the variable 
     value : number 
 ** TS you can define on parameter
@@ -72,7 +73,8 @@ Ans6 :suppose by default App ,module is there that having Imports from
 Que7:What happen on page load or Boostraping in the angular &RootModule &Component?
 Ans7:When you load any page index.html loaded where you will find the name of rootmodule e.g app-route which one is loaded from main.ts
 	  In the main.ts we define bootstrapModule (NameofModule) which one isloaded after getting the name of the module .Now in the App Module 
-      Pick the name of the Bootstrap Component e.g AppComponent -> then app.component.TS->in then defination of Component ->Tempalte url->html page 
+    Pick the name of the Bootstrap Component 
+    e.g AppComponent -> then app.component.TS->in then defination of Component ->Tempalte url->html page 
 	  
       |-The Module which one is loaded first or bootstrap first called RootModule 
 		to find open main.ts ->platformBrowserDynamic().bootstrapModule(AppModule){}	  
@@ -112,7 +114,7 @@ Routing
    |-so when we need that we need to implement extra on component or with service then go for RouteGuard 
    |Changes in the code in app routing.ts =>{path:'welcome/:name',component:WelcomeComponent,canActivate:[RouteGuardService]}, 
 											{path:'todos',component:ListTodosComponent,canActivate:[RouteGuardService]},
-											defining the canactivate component and service name
+		defining the canactivate component and service name
 											
 Vid 51-> 
  Observable
@@ -143,8 +145,8 @@ Vid 51->
 		 this.welcomeDataService.executehelloWorldBeanService().subscribe(
           response => this.handleSuccessfulResponse(response)  
        );  
-	   means needs to call the handleSuccessfulResponse,the response which comes back.You're saying when the subscribe whatever is done, by the observable is successful,
-       get the response and call this specific method.
+    means needs to call the handleSuccessfulResponse,the response which comes back.You're saying when the subscribe whatever is done,
+    by the observable is successful, get the response and call this specific method.
 		 
  Que:Arrow Method?		
  Que:Error handling With SUBSCRIBE?
@@ -185,7 +187,8 @@ PIPE=> what should done if req is success or fails
 	 
 -Basic-> we have to send header with the user name password with every request .
 
-Ques:-Error Access to XMLHttpRequest at 'http://localhost:8080/users/sandeep/todos' from origin 'http://localhost:4200' has been blocked by CORS policy:
+Ques:-Error Access to XMLHttpRequest at 'http://localhost:8080/users/sandeep/todos' from origin 'http://localhost:4200' 
+has been blocked by CORS policy:
  No 'Access-Control-Allow-Origin' header is present on the requested resource.	 
 Sol:- Header is missing  means Authorization BAsic User name password
 
